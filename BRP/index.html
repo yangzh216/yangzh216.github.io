@@ -1,0 +1,90 @@
+<!--
+ * @Author: jmh
+ * @Date: 2026-05-19 09:58:17
+ * @LastEditors: yzh
+ * @LastEditTime: 2026-05-19 10:00:27
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BRP</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+  font-family: 'inherit', sans-serif;
+  margin: 40px auto;
+  max-width: 900px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+h1 { font-size: 2.2em; font-weight: 800; margin-bottom: 0.3em; }
+h2 { font-size: 1.4em; margin-top: 2em; }
+a { color: #007acc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.authors { font-size: 1.1em; margin-bottom: 0.5em; }
+.affiliations { color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+.buttons { margin: 20px 0; }
+button {
+  background: #222; color: white; border: none; padding: 10px 20px; font-size: 15px;
+  border-radius: 25px; margin: 5px; cursor: pointer; font-weight: 550;
+}
+button:hover { background: #444; }
+button i {
+  margin-right: 5px;
+}
+.abstract { text-align: justify; margin-top: 2em; }
+.project-link {
+  color: #007acc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: #005b99;
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<h1>BRP: Query-Efficient Block Revert Patch for Decision-Based Black-Box Adversarial Attack</h1>
+
+<p class="authors">
+  <a href="#">Zenghui Yang</a><sup>1</sup>,
+  <a href="#">Xingquan Zuo</a><sup>1*</sup>,
+  <a href="#">Gang Chen</a><sup>2</sup>,
+  <a href="#">Hai Huang</a><sup>1</sup>,
+  <a href="#">Tianle Zhang</a><sup>1</sup>
+</p>
+
+<p class="affiliations">
+  <sup>1</sup>Beijing University of Posts and Telecommunications,  
+  <sup>2</sup>Victoria University of Wellington
+</p>
+
+<div class="buttons">
+  <button onclick="window.open('https://arxiv.org/abs/xxxxxx')">
+    <i class="fa-solid fa-file-lines"></i> Paper
+  </button>
+
+  <button onclick="window.open('https://github.com/yangzh216/XXX')">
+    <i class="fa-brands fa-github"></i> Code
+  </button>
+
+  <button onclick="window.open('https://drive.google.com/...')">
+    <i class="fa-solid fa-image"></i> Data
+  </button>
+</div>
+
+<h2>Abstract</h2>
+<p class="abstract">
+Adversarial patches pose a serious threat to deep neural networks, as small localized perturbations can decisively control model predictions. In real-world deployments, the decision-based black-box setting is the most realistic and challenging threat model, where attackers observe only the predicted labels. Designing adversarial patch attacks under this setting is of substantial real-world significance for rigorously testing model robustness under realistic black-box conditions. However, adversarial patch attacks in the decision-based setting remain largely underexplored. Existing methods often suffer from low query efficiency and require large patch areas, which significantly limit their practical applicability. We propose Block Revert Patch (BRP), a novel reverse construction method for query-efficient adversarial patch generation. Instead of adding perturbations, BRP formulates patch generation as a pixel-block reversion problem and employs a two-stage process to progressively refine the patch. Specifically, the single-block revert test stage uses a sliding window to temporarily revert individual blocks and collect those whose reversion maintains the adversarial effect. The global revert optimization stage then searches for an optimal combination of pixel-blocks from this set, further reducing the patch size. By iteratively alternating between these two stages, BRP progressively refines the patch in a coarse-to-fine manner. Experiments show that BRP significantly reduces patch size and query cost compared to state-of-the-art decision-based attacks, offering a strong and practical approach for evaluating model vulnerability in adversarial settings.</p>
+
+</body>
+</html>
